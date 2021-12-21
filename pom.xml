@@ -16,7 +16,7 @@
     <properties>
         <java.version>11</java.version>
         <!--suppress UnresolvedMavenProperty -->
-        <argLine>-Dcucumber.filter.tags='${tags}'</argLine>
+        <!--argLine>-Dcucumber.filter.tags='${tags}'</argLine -->
     </properties>
     <dependencies>
         <dependency>
@@ -56,20 +56,9 @@
         </dependency>
         <!-- https://mvnrepository.com/artifact/junit/junit -->
         <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <version>4.13.2</version>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
             <groupId>org.junit.vintage</groupId>
             <artifactId>junit-vintage-engine</artifactId>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>io.cucumber</groupId>
-            <artifactId>cucumber-junit-platform-engine</artifactId>
-            <version>7.1.0</version>
+            <version>5.8.2</version>
             <scope>test</scope>
         </dependency>
         <!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-core -->

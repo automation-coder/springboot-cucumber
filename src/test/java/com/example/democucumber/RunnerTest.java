@@ -7,16 +7,14 @@ import org.junit.runner.RunWith;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @RunWith(Cucumber.class)
-@CucumberContextConfiguration
-@SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.MOCK)
 @CucumberOptions(
-        features = "classpath:features/",
-        //glue = "classpath:com.example.democucumber.stepdefs",
+        features = "src/test/resources/features/",
+        publish = true,
         plugin = {
-                "summary",
+                "pretty",
                 "html:target/cucumber/html/report.html"
-        }, monochrome = true, stepNotifications = true,
-        tags = ""
+        },
+        extraGlue = "com.example.democucumber.config"
 )
 public class RunnerTest {
 }
